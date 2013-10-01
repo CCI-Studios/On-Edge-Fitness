@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the On-Edge feature.
+ */
+
+include_once 'on_edge.features.inc';
