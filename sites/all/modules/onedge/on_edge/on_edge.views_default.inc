@@ -114,6 +114,7 @@ function on_edge_views_default_views() {
   $handler->display->display_options['fields']['field_before_photo']['field'] = 'field_before_photo';
   $handler->display->display_options['fields']['field_before_photo']['label'] = '';
   $handler->display->display_options['fields']['field_before_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_before_photo']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_before_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_before_photo']['settings'] = array(
     'image_style' => 'before_after_photo',
@@ -125,6 +126,7 @@ function on_edge_views_default_views() {
   $handler->display->display_options['fields']['field_after_photo']['field'] = 'field_after_photo';
   $handler->display->display_options['fields']['field_after_photo']['label'] = '';
   $handler->display->display_options['fields']['field_after_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_after_photo']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_after_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_after_photo']['settings'] = array(
     'image_style' => 'before_after_photo',
@@ -199,11 +201,6 @@ function on_edge_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Header: Global: Unfiltered text */
-  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
-  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
-  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
-  $handler->display->display_options['header']['area_text_custom']['content'] = '<h2>Team</h2>';
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
@@ -232,6 +229,7 @@ function on_edge_views_default_views() {
   $handler->display->display_options['fields']['field_qualifications']['table'] = 'field_data_field_qualifications';
   $handler->display->display_options['fields']['field_qualifications']['field'] = 'field_qualifications';
   $handler->display->display_options['fields']['field_qualifications']['label'] = 'Certifications/Qualifications';
+  $handler->display->display_options['fields']['field_qualifications']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_qualifications']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_qualifications']['multi_type'] = 'ul';
   /* Field: Content: Body */
@@ -261,6 +259,16 @@ function on_edge_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler->display->display_options['path'] = 'about/team';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'Team';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
   $export['team'] = $view;
 
   return $export;

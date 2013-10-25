@@ -1,7 +1,7 @@
 (function($) {
 	$(function(){
 
-		$("ul.collapse > li:first").addClass("open");
+		$("ul.collapse > li:first").addClass("open").find("ul").css("display","block");
 
 		$("ul.collapse > li > h3").click(function(){
 			$li = $(this).parent();
@@ -9,15 +9,13 @@
 
 			if ($li.hasClass("open"))
 			{
-				$ul_ul.slideUp(function(){
-					$li.removeClass("open");
-				});
+				$ul_ul.slideUp();
+				$li.removeClass("open");;
 			}
 			else
 			{
-				$ul_ul.slideDown(function(){
-					$li.addClass("open");
-				});
+				$ul_ul.slideDown();
+				$li.addClass("open");
 			}
 		});
 	});

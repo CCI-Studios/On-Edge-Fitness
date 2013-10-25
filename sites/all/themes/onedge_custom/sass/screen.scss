@@ -4,9 +4,9 @@ $lime:#bfe962;
     font-family: 'dirty_egoregular';
     src: url('../fonts/dirtyego/dirtyego-webfont.eot');
     src: url('../fonts/dirtyego/dirtyego-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/dirtyego/dirtyego-webfont.svg#dirty_egoregular') format('svg'),
          url('../fonts/dirtyego/dirtyego-webfont.woff') format('woff'),
-         url('../fonts/dirtyego/dirtyego-webfont.ttf') format('truetype'),
-         url('../fonts/dirtyego/dirtyego-webfont.svg#dirty_egoregular') format('svg');
+         url('../fonts/dirtyego/dirtyego-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -269,10 +269,10 @@ input.green-button
 					bottom:0;
 					left:0;
 					right:0;
-					background-image: -moz-linear-gradient(top, #BFE962 0%, #7FB013 100%);
-					background-image: -webkit-linear-gradient(top, #BFE962 0%, #7FB013 100%);
-					background-image: linear-gradient(to bottom, #BFE962 0%, #7FB013 100%);
-					background-image:#93c030;
+					background:#93c030;
+					background: -moz-linear-gradient(top, #BFE962 0%, #7FB013 100%);
+					background: -webkit-linear-gradient(top, #BFE962 0%, #7FB013 100%);
+					background: linear-gradient(to bottom, #BFE962 0%, #7FB013 100%);
 					z-index:-1;
 					opacity:0.95;
 					border-radius:3px;
@@ -445,17 +445,6 @@ input.green-button
 	background:url(../images/highlight-section-top.png) no-repeat top center;
 	padding:40px 10px 150px 10px;
 
-	& > div 
-	{
-		background:url(../images/logoman-small.png) no-repeat right top;
-		overflow:hidden;
-
-		& > div 
-		{
-			padding-right:75px;
-		}
-	}
-
 	#copyright
 	{
 		float:left;
@@ -478,6 +467,35 @@ input.green-button
 		a 
 		{
 			color:#878787;
+
+			&:hover
+			{
+				color:$lime;
+			}
+		}
+	}
+
+	#block-block-4 
+	{
+		p 
+		{
+			margin:0;
+		}
+
+		a 
+		{
+			float:right;
+			display:block;
+			width:66px;
+			height:66px;
+			background:url(../images/logoman-small.png) no-repeat;
+			font-size:0;
+			color:transparent;
+
+			&:hover 
+			{
+				background-image:url(../images/logoman-small-hover.png);
+			}
 		}
 	}
 }
@@ -522,6 +540,7 @@ input.green-button
 	font-family:"dirty_egoregular", "franklin-gothic-urw", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
 	font-size:75px;
 	font-weight:normal;
+	-webkit-font-smoothing:antialiased;
 	margin-bottom:10px;
 	text-shadow:2px 2px 3px rgba(0,0,0,0.75);
 }
@@ -529,6 +548,11 @@ input.green-button
 #block-system-main 
 {
 	text-shadow:1px 1px 2px black;
+
+	img 
+	{
+		max-width:100%;
+	}
 
 	h2 
 	{
@@ -545,8 +569,9 @@ input.green-button
 	h3 
 	{
 		font-family:"dirty_egoregular";
-		font-size:24px;
-		font-weight:bold;
+		font-size:26px;
+		font-weight:normal;
+		-webkit-font-smoothing:antialiased;
 		color:$lime;
 		margin-bottom:8px;
 	}
@@ -594,6 +619,15 @@ input.green-button
 		margin-bottom:20px;
 		float:left;
 		display:block;
+
+		td 
+		{
+			height:38px;
+		}
+		th 
+		{
+			height:57px;
+		}
 	}
 
 	.glow
@@ -706,8 +740,9 @@ input.green-button
 		a 
 		{
 			font-family:"dirty_egoregular";
-			font-size:24px;
-			font-weight:bold;
+			font-size:26px;
+			font-weight:normal;
+			-webkit-font-smoothing:antialiased;
 		}
 	}
 
@@ -767,8 +802,9 @@ input.green-button
 	h3 
 	{
 		font-family:"dirty_egoregular";
-		font-size:24px;
-		font-weight:bold;
+		font-size:26px;
+		font-weight:normal;
+		-webkit-font-smoothing:antialiased;
 		color:$lime;
 		margin-bottom:8px;
 	}
@@ -892,6 +928,11 @@ input.green-button
 		}
 	}
 
+	.views-field-title
+	{
+		padding-left:240px;
+	}
+
 	.views-field-field-image
 	{
 		float:left;
@@ -907,7 +948,6 @@ input.green-button
 	{
 		font-weight:bold;
 		display:block;
-		margin-bottom:-5px;
 	}
 
 	.views-field-field-qualifications
@@ -972,6 +1012,11 @@ ul.collapse
 			position:relative;
 			z-index:1;
 			margin-bottom:0!important;
+
+			&:hover
+			{
+				opacity:0.8;
+			}
 		}
 
 		& > ul 
@@ -1044,10 +1089,9 @@ ul.collapse
 		margin-right:20px;
 	}
 
-	.views-field-title,
-	.views-field-body
+	.views-field-field-before-photo ~ .views-field-field-after-photo ~ .views-field-body
 	{
-		float:left;
+		padding-left:240px;
 	}
 }
 
@@ -1374,6 +1418,23 @@ ul.collapse
 	{
 		display:none;
 		content:none;
+	}
+
+	.view-team
+	{
+		.views-field-field-image
+		{
+			float:none;
+			margin-right:0;
+			text-align:center;
+		}
+
+		.views-field-title,
+		.views-field-field-qualifications,
+		.views-field-body
+		{
+			padding-left:0;
+		}
 	}
 }
 
