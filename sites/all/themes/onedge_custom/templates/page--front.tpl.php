@@ -81,8 +81,7 @@
 
       <?php if ($logo): ?>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-          <img src="<?php print $base_path; ?>sites/all/themes/onedge_custom/images/logo-green.png" alt="<?php print t('Home'); ?>" class="green" />
-          <img src="<?php print $base_path; ?>sites/all/themes/onedge_custom/images/logo.png" alt="<?php print t('Home'); ?>" class="white" />
+          <img src="<?php print $base_path; ?>sites/all/themes/onedge_custom/images/logo-green.png" alt="<?php print t('Home'); ?>" />
         </a>
       <?php endif; ?>
 

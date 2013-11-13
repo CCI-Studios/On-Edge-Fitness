@@ -529,24 +529,6 @@ input.green-button
 	{
 		max-width:100%;
 	}
-
-	img.white 
-	{
-		display:none;
-	}
-
-	&:hover
-	{
-		img.green
-		{
-			display:none;
-		}
-
-		img.white 
-		{
-			display:inline;
-		}
-	}
 }
 
 #page-title
