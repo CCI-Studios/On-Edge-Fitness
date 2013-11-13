@@ -431,6 +431,7 @@ input.green-button
 	& > div
 	{
 		padding:30px 0;
+		overflow:hidden;
 	}
 }
 
@@ -524,13 +525,27 @@ input.green-button
 
 #logo
 {
-	padding-top:10px;
-	padding-bottom:10px;
-	display:block;
-
-	img 
+	img
 	{
 		max-width:100%;
+	}
+
+	img.white 
+	{
+		display:none;
+	}
+
+	&:hover
+	{
+		img.green
+		{
+			display:none;
+		}
+
+		img.white 
+		{
+			display:inline;
+		}
 	}
 }
 
@@ -1094,6 +1109,17 @@ ul.collapse
 		padding-left:240px;
 	}
 }
+
+ul.primary li a 
+{
+	background-color:#404040!important;
+
+	&:hover
+	{
+		background-color:#606060!important;
+	}
+}
+
 
 
 
