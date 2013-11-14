@@ -137,11 +137,16 @@ input.green-button
 	height:41px;
 	width:41px;
 	display:none;
-	background:url(../images/mobile-menu.png) no-repeat;
+	background:url(../images/menu-ring.png) no-repeat;
+	line-height:41px;
+	color:white;
+	font-size:12px;
 
 	&:hover 
 	{
-		background-image:url(../images/mobile-menu-hover.png);
+		background-image:url(../images/menu-ring-hover.png);
+		color:$lime;
+		text-decoration:none;
 	}
 }
 
