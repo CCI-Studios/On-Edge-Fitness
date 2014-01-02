@@ -1083,12 +1083,22 @@ ul.collapse
 	{
 		float:left;
 		margin-right:1px;
+
+		img 
+		{
+			max-width:none!important;
+		}
 	}
 
 	.views-field-field-after-photo
 	{
 		float:left;
 		margin-right:20px;
+
+		img 
+		{
+			max-width:none!important;
+		}
 	}
 
 	.views-field-field-before-photo ~ .views-field-field-after-photo ~ .views-field-body
