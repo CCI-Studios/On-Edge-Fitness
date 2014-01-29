@@ -199,6 +199,14 @@ input.green-button
 				background-image:url(../images/youtube-hover.png);
 			}
 		}
+
+		&.login 
+		{
+			font-size:16px;
+			color:$lime;
+			width:auto;
+			line-height:41px;
+		}
 	}
 }
 
@@ -857,8 +865,8 @@ input.green-button
 
 	ul li 
 	{
-		margin-right:2%;
-		width:32%;
+		margin-right:1.3333%;
+		width:31%;
 
 		&.last
 		{
@@ -903,6 +911,11 @@ input.green-button
 			{
 				background-image:url(../images/youtube-large-hover.png);
 			}
+		}
+
+		&.login 
+		{
+			display:none;
 		}
 	}
 }
@@ -1083,22 +1096,12 @@ ul.collapse
 	{
 		float:left;
 		margin-right:1px;
-
-		img 
-		{
-			max-width:none!important;
-		}
 	}
 
 	.views-field-field-after-photo
 	{
 		float:left;
 		margin-right:20px;
-
-		img 
-		{
-			max-width:none!important;
-		}
 	}
 
 	.views-field-field-before-photo ~ .views-field-field-after-photo ~ .views-field-body
