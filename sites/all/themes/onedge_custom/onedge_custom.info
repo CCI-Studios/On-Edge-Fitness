@@ -2,13 +2,17 @@ name = On Edge Fitness
 description = On Edge Fitness Custom
 core = 7.x
 
+scripts[] = js/slick.js
+scripts[] = js/header-images.js
 scripts[] = js/mobile-menu.js
 scripts[] = js/collapselist.js
 
-stylesheets[all][] = stylesheets/screen.css
+stylesheets[all][] = css/slick.css
+stylesheets[all][] = css/screen.css
 
 regions[navigation] = Navigation
 regions[header] = Header
+regions[home_social] = Home Social
 regions[featured] = Featured
 regions[help] = Help
 regions[content] = Content

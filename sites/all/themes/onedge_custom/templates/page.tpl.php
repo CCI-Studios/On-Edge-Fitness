@@ -75,23 +75,26 @@
 
   <div id="page-wrapper"><div id="page">
 
-
-
-    <div id="header"><div class="section"><div>
+    <div id="navigation"><div><div>
 
       <?php if ($logo): ?>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-          <img src="<?php print $base_path; ?>sites/all/themes/onedge_custom/images/logo-green.png" alt="<?php print t('Home'); ?>" />
+          <img src="<?php print $base_path; ?>sites/all/themes/onedge_custom/images/logo-green2.png" alt="<?php print t('Home'); ?>" />
         </a>
       <?php endif; ?>
 
-      <?php print render($page['header']); ?>
-
-    </div></div></div> <!-- /.section, /#header -->
-
-    <div id="navigation"><div>
       <?php print render($page['navigation']); ?>
-    </div></div>
+    </div></div></div>
+
+    <div id="header"><div><div>
+      <?php print render($page['header']); ?>
+    </div></div></div> <!-- /#header -->
+
+    <?php if ($page['home_social']): ?>
+    <div id="home-social"><div><div>
+      <?php print render($page['home_social']); ?>
+    </div></div></div> <!-- /#header -->
+    <?php endif; ?>
 
     <?php print $messages; ?>
 
