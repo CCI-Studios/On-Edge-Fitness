@@ -924,6 +924,7 @@ ul.primary li a {
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); }
             #block-system-main-menu .content > ul > li a:hover, #block-system-main-menu .content > ul > li a:active {
               background: url(../images/mobile-menu-item-hover.png) repeat-x top;
+              background-size: 100% 100%;
               color: #c2e96b; }
           #block-system-main-menu .content > ul > li ul {
             display: block;
@@ -941,11 +942,12 @@ ul.primary li a {
                   border-bottom: 0; }
               #block-system-main-menu .content > ul > li ul li a {
                 color: white;
-                padding-left: 50px;
+                padding: 10px 20px 10px 50px;
                 border-top: 1px solid rgba(255, 255, 255, 0.17);
-                line-height: 38px; }
+                line-height: 1; }
                 #block-system-main-menu .content > ul > li ul li a:hover, #block-system-main-menu .content > ul > li ul li a:active {
-                  background: url(../images/mobile-menu-item-hover.png) repeat-x top; }
+                  background: url(../images/mobile-menu-item-hover.png) repeat-x top;
+                  background-size: 100% 100%; }
   #block-menu-block-3 {
     display: none; }
   #footer {

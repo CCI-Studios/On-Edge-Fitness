@@ -1480,6 +1480,7 @@ ul.primary li a
 						&:active
 						{
 							background:url(../images/mobile-menu-item-hover.png) repeat-x top;
+							background-size: 100% 100%;
 							color:#c2e96b;
 						}
 					}
@@ -1511,14 +1512,15 @@ ul.primary li a
 							a 
 							{
 								color:white;
-								padding-left:50px;
+								padding:10px 20px 10px 50px;
 								border-top:1px solid rgba(255, 255, 255, 0.17);
-								line-height:38px;
+								line-height:1;
 
 								&:hover,
 								&:active
 								{
 									background:url(../images/mobile-menu-item-hover.png) repeat-x top;
+									background-size: 100% 100%;
 								}
 							}
 						}
