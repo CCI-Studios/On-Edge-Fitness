@@ -341,8 +341,8 @@ input.green-button
 					a 
 					{
 						color:black;
-						line-height:28px;
-						padding:0 12px;
+						line-height:1;
+						padding:6px 12px;
 						display:block;
 						border-top:1px solid rgba(255, 255, 255, 0.085);
 
@@ -350,6 +350,7 @@ input.green-button
 						{
 							color:$lime;
 							background:url(../images/menu-hover.png) repeat-x;
+							background-size: 100% 100%;
 						}
 					}
 				}
