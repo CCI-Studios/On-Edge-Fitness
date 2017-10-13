@@ -132,17 +132,17 @@ input.green-button {
     width: 35px;
     height: 35px; }
     #block-menu-block-1 a.facebook {
-      background-image: url(../images/facebook.png); }
+      background-image: url(../images/facebook.png?v2); }
       #block-menu-block-1 a.facebook:hover {
-        background-image: url(../images/facebook-hover.png); }
+        background-image: url(../images/facebook-hover.png?v2); }
     #block-menu-block-1 a.twitter {
-      background-image: url(../images/twitter.png); }
+      background-image: url(../images/twitter.png?v2); }
       #block-menu-block-1 a.twitter:hover {
-        background-image: url(../images/twitter-hover.png); }
+        background-image: url(../images/twitter-hover.png?v2); }
     #block-menu-block-1 a.youtube {
-      background-image: url(../images/youtube.png); }
+      background-image: url(../images/youtube.png?v2); }
       #block-menu-block-1 a.youtube:hover {
-        background-image: url(../images/youtube-hover.png); }
+        background-image: url(../images/youtube-hover.png?v2); }
     #block-menu-block-1 a.login {
       font-size: 16px;
       color: white;
@@ -420,8 +420,7 @@ input.green-button {
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.75); }
 
 #block-system-main {
-  text-shadow: 1px 1px 2px black;
-  float: right; }
+  text-shadow: 1px 1px 2px black; }
   #block-system-main img {
     max-width: 100%; }
   #block-system-main h2 {
