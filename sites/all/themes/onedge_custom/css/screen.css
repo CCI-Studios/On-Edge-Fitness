@@ -152,7 +152,8 @@ input.green-button {
         color: #bfe962; }
 
 #block-system-main-menu .content {
-  float: right; }
+  float: right;
+  clear: right; }
   #block-system-main-menu .content > ul > li {
     font-size: 15px;
     margin-right: 16px;
