@@ -1,0 +1,43 @@
+.block--basic-header
+{
+  clear: both;
+  height: 80px;
+  background: black;
+}
+
+.bean-page-title
+{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 15% 25px 12% 25px;
+
+  &
+  {
+    @media (max-width: 640px)
+    {
+      padding: 100px 25px 80px 25px;
+    }
+  }
+
+  h1
+  {
+    @include condensed();
+    color: $teal;
+    font-weight: 300;
+    text-align: center;
+    font-size: 3.25em;
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.2;
+
+    &
+    {
+      @media (max-width: 640px)
+      {
+        font-size: 2.5em;
+        line-height: 1;
+      }
+    }
+  }
+}

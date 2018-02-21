@@ -1,0 +1,182 @@
+.page-node-1
+{
+  .main-content
+  {
+    padding: 80px 0 0 0;
+    background: black;
+    color: white;
+
+    & > div
+    {
+      max-width: none;
+      padding: 12% 25px;
+      background: url(../images/bg-contact.jpg) no-repeat center center;
+      background-size: cover;
+
+      & > div
+      {
+        max-width: 580px;
+        margin: 0 auto;
+      }
+    }
+  }
+  .page-title
+  {
+    text-align: center;
+  }
+  .block--main-content
+  {
+    font-size: 1.125em;
+  }
+}
+
+.block--contact
+{
+  width: 33.333%;
+  float: left;
+
+  &
+  {
+    @media (max-width: 760px)
+    {
+      float: none;
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto 2.5em auto;
+    }
+  }
+
+  & > div > h2
+  {
+    display: none;
+  }
+  .contact-info
+  {
+    min-height: 280px;
+    padding: 60% 25px 0 25px;
+    font-size: 0.875em;
+    position: relative;
+
+    &
+    {
+      @media (max-width: 760px)
+      {
+        min-height: 0;
+        margin-bottom: 1.5em;
+      }
+    }
+  }
+  .contact-logo
+  {
+    max-width: 80%;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    padding-bottom: 50%;
+    margin: 0 auto;
+
+    img
+    {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      height: auto !important;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+  .contact-map
+  {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+
+    img
+    {
+      display: block;
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+}
+.block--contact--pure
+{
+  background: black;
+  color: white;
+}
+
+.block--contact-form
+{
+  clear: both;
+  background: white;
+  padding: 60px 25px;
+
+  & > div
+  {
+    max-width: 530px;
+    margin: 0 auto;
+  }
+  h2
+  {
+    font-size: 2.75em;
+    text-align: center;
+    line-height: 1;
+  }
+  .webform-component--email
+  {
+    width: 49%;
+    float: left;
+    margin-right: 2%;
+    margin-top: 0;
+
+    @media (max-width: 480px)
+    {
+      width: 100%;
+      float: none;
+      margin-right: 0;
+    }
+  }
+  .webform-component--phone
+  {
+    width: 49%;
+    float: left;
+    margin-top: 0;
+
+    @media (max-width: 480px)
+    {
+      width: 100%;
+      float: none;
+      margin-top: 1em;
+    }
+  }
+  .form-actions
+  {
+    text-align: center;
+  }
+  .form-submit
+  {
+    display: inline-block;
+    -webkit-appearance: none;
+    appearance: none;
+    color: $teal;
+    background: white;
+    border: 1px solid $teal;
+    border-radius: 4px;
+    height: 50px;
+    line-height: 48px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0 25px;
+    text-decoration: none;
+    min-width: 200px;
+    font-size: 0.875em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}

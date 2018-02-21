@@ -1,0 +1,13 @@
+body
+{
+  font-family: "pragmatica", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin condensed() {
+  font-family: "pragmatica-condensed", sans-serif;
+}
+.condensed
+{
+  @include condensed();
+}

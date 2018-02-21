@@ -1,0 +1,195 @@
+.header
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  padding: 0 25px;
+  z-index: 10;
+
+  &.scroll
+  {
+    background: white;
+  }
+}
+
+.logo
+{
+  float: left;
+  margin-left: 5px;
+  margin-right: 25px;
+  height: 80px;
+  line-height: 80px;
+  filter: drop-shadow(2px 2px rgba(0,0,0,0.25));
+
+  img
+  {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+.scroll .logo
+{
+  background: url(../images/logo-man-black.svg) no-repeat center center;
+  filter: none;
+  width: 41px;
+
+  img
+  {
+    display: none;
+  }
+}
+
+.menu-button
+{
+  display: none;
+  float: right;
+  font-size: 0;
+  text-decoration: none;
+  background: url(../images/mobile-menu.svg) no-repeat center center;
+  width: 72px;
+  height: 80px;
+  margin-right: -25px;
+
+  @media (max-width: 760px)
+  {
+    display: block;
+  }
+}
+.scroll .menu-button
+{
+  background-image: url(../images/mobile-menu-black.svg);
+}
+
+.block--login
+{
+  float: right;
+  margin-left: 25px;
+
+  .login-button
+  {
+    @include condensed();
+    font-size: 0.875em;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    line-height: 80px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-right: -25px;
+
+    &
+    {
+      @media (max-width: 760px)
+      {
+        margin-right: 0;
+      }
+    }
+
+    img
+    {
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+      margin-left: 5px;
+    }
+  }
+}
+.scroll .block--login .login-button
+{
+  background: #26d0b6;
+}
+
+.block--main-menu
+{
+  &
+  {
+    @media (max-width: 760px)
+    {
+      display: none;
+      position: fixed;
+      top: 80px;
+      right: 0;
+      z-index: 10;
+      background: black;
+      padding: 15px 0;
+      width: 180px;
+    }
+  }
+
+  .content > .menu
+  {
+    text-align: center;
+
+    & > li
+    {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+
+      &
+      {
+        @media (max-width: 760px)
+        {
+          display: block;
+        }
+      }
+
+      & > a
+      {
+        @include condensed();
+        display: block;
+        color: white;
+        text-transform: uppercase;
+        font-size: 0.875em;
+        font-weight: normal;
+        padding: 0 10px;
+        line-height: 80px;
+        text-decoration: none;
+
+        &
+        {
+          @media (max-width: 760px)
+          {
+            line-height: 1;
+            padding: 15px 25px;
+            text-align: right;
+          }
+        }
+
+        &:hover
+        {
+          color: $teal;
+        }
+      }
+      & > ul
+      {
+        display: none;
+      }
+    }
+  }
+}
+.scroll .block--main-menu .content > .menu > li > a
+{
+  color: black;
+
+  &
+  {
+    @media (max-width: 760px)
+    {
+      color: white;
+    }
+  }
+
+  &:hover
+  {
+    color: $teal;
+  }
+}
+.menu-open .block--main-menu
+{
+  display: block;
+}

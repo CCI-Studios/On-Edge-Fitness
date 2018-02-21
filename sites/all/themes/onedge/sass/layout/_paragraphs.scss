@@ -1,0 +1,44 @@
+.paragraphs-item-two-column-layout
+{
+  clear: both;
+  margin-bottom: 80px;
+
+  &:after
+  {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .field-name-field-left-column
+  {
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+
+    @media (max-width: 760px)
+    {
+      width: auto;
+      float: none;
+      margin-right: 0;
+      margin-bottom: 1.5em;
+    }
+  }
+  .field-name-field-right-column
+  {
+    width: 48%;
+    float: left;
+
+    @media (max-width: 760px)
+    {
+      width: auto;
+      float: none;
+    }
+  }
+}
+
+.paragraphs-item-basic-content
+{
+  clear: both;
+  margin-bottom: 80px;
+}

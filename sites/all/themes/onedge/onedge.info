@@ -1,0 +1,21 @@
+name = On Edge Fitness
+description = On Edge Fitness Custom
+core = 7.x
+
+scripts[] = js/slick.js
+scripts[] = js/header-images.js
+scripts[] = js/menu.js
+scripts[] = js/team.js
+scripts[] = js/classes.js
+scripts[] = js/open-list.js
+scripts[] = js/mobile-menu.js
+
+stylesheets[all][] = css/slick.css
+stylesheets[all][] = css/importer.css
+
+regions[header] = Header
+regions[help] = Help
+regions[before_content] = Before Content
+regions[content] = Content
+regions[after_content] = After Content
+regions[footer] = Footer

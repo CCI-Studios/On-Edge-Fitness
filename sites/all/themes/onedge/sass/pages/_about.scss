@@ -1,0 +1,129 @@
+.page-node-9
+{
+  .main-content
+  {
+    &:before
+    {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 60%;
+      top: 0;
+      bottom: 0;
+      width: 1000px;
+      background: url(../images/bg-logoman-climbing.svg) no-repeat left center;
+      background-size: auto 100%;
+
+      @media (max-width: 640px)
+      {
+        display: none;
+      }
+    }
+    &:after
+    {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 1800px;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      background: black;
+
+      @media (max-width: 640px)
+      {
+        display: none;
+      }
+    }
+    
+    & > div
+    {
+      max-width: 1080px;
+      margin: 0 auto;
+
+      & > div
+      {
+        max-width: 57.5%;
+
+        @media (max-width: 640px)
+        {
+          max-width: none;
+        }
+      }
+    }
+  }
+}
+
+.block--about-our-background
+{
+  clear: both;
+  background: black;
+  color: white;
+  position: relative;
+  padding: 0 25px;
+
+  & > div
+  {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 100px 0;
+
+    &
+    {
+      @media (max-width: 640px)
+      {
+        padding-bottom: 300px;
+      }
+    }
+
+    &:before
+    {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 37.5%;
+      background: url(../images/bg-our-background.jpg) no-repeat bottom center;
+      background-size: contain;
+
+      @media (max-width: 640px)
+      {
+        width: 100%;
+        top: auto;
+        height: 300px;
+      }
+    }
+
+    & > div
+    {
+      width: 60%;
+      margin: 0 0 0 auto;
+
+      &
+      {
+        @media (max-width: 640px)
+        {
+          width: auto;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  h2
+  {
+    @include condensed();
+    color: $teal;
+    font-weight: 300;
+    font-size: 2.75em;
+    margin-bottom: 0.5em;
+  }
+
+  a
+  {
+    color: white;
+  }
+}
