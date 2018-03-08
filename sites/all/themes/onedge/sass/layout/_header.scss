@@ -51,6 +51,8 @@
   width: 72px;
   height: 80px;
   margin-right: -25px;
+  position: relative;
+  z-index: 11;
 
   @media (max-width: 760px)
   {
@@ -111,12 +113,15 @@
     {
       display: none;
       position: fixed;
-      top: 80px;
-      right: 0;
+      top: 0;
+      left: 0;
+      right: 72px;
       z-index: 10;
       background: black;
-      padding: 15px 0;
-      width: 180px;
+      padding: 35px;
+      height: 100%;
+      width: auto;
+      overflow: auto;
     }
   }
 
@@ -129,6 +134,7 @@
       margin: 0;
       padding: 0;
       display: inline-block;
+      position: relative;
 
       &
       {
@@ -149,25 +155,111 @@
         padding: 0 10px;
         line-height: 80px;
         text-decoration: none;
+        position: relative;
 
         &
         {
+          @media (max-width: 840px)
+          {
+            padding: 0 8px;
+          }
           @media (max-width: 760px)
           {
             line-height: 1;
-            padding: 15px 25px;
-            text-align: right;
+            padding: 12px 0;
+            color: white;
+            text-align: left;
+            font-weight: bold;
+            font-size: 0.8em;
+            border-bottom: 1px solid $teal;
+            margin-bottom: 6px;
           }
         }
 
         &:hover
         {
           color: $teal;
+
+          &:before
+          {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 25px;
+            left: 10px;
+            right: 10px;
+            border-top: 1px solid $teal;
+
+            &
+            {
+              @media (max-width: 760px)
+              {
+                display: none;
+              }
+            }
+          }
         }
       }
       & > ul
       {
         display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        list-style: none;
+        background: black;
+        padding: 6px 0;
+        min-width: 240px;
+
+        &
+        {
+          @media (max-width: 760px)
+          {
+            display: block;
+            position: static;
+            margin-bottom: 6px;
+            min-width: 0;
+          }
+        }
+
+        & > li
+        {
+          display: block;
+          padding: 0;
+          margin: 0;
+
+          & > a
+          {
+            @include condensed();
+            color: white;
+            text-decoration: none;
+            font-size: 0.8em;
+            display: block;
+            line-height: 1;
+            padding: 6px 20px;
+            font-weight: bold;
+
+            &:hover
+            {
+              color: $teal;
+            }
+            &
+            {
+              @media (max-width: 760px)
+              {
+                padding-right: 0;
+              }
+            }
+          }
+          ul
+          {
+            display: none;
+          }
+        }
+      }
+      &:hover > ul
+      {
+        display: block;
       }
     }
   }
@@ -192,4 +284,23 @@
 .menu-open .block--main-menu
 {
   display: block;
+}
+.menu-open .page-wrapper
+{
+  @media (max-width: 760px)
+  {
+    &:before
+    {
+      content: "";
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 72px;
+      bottom: 0;
+      background: black;
+      z-index: 10;
+      opacity: 0.5;
+    }
+  }
 }
