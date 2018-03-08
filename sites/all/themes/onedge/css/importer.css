@@ -936,9 +936,12 @@ textarea {
       .view-facilities.view-display-id-block .views-row {
         width: 100%;
         margin-left: 0;
-        margin-bottom: 0; }
-        .view-facilities.view-display-id-block .views-row:nth-child(3n + 1) {
-          margin-left: 0; } }
+        margin-bottom: 15px; }
+        .view-facilities.view-display-id-block .views-row:nth-child(3n + 1), .view-facilities.view-display-id-block .views-row:nth-child(5n + 1) {
+          margin-left: 0; }
+        .view-facilities.view-display-id-block .views-row > div {
+          margin: 0 auto;
+          max-width: 325px; } }
 
 .node-facility-page.node-teaser {
   position: relative;

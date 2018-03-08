@@ -131,11 +131,18 @@
         {
           width: 100%;
           margin-left: 0;
-          margin-bottom: 0;
+          margin-bottom: 15px;
 
-          &:nth-child(3n + 1)
+          &:nth-child(3n + 1),
+          &:nth-child(5n + 1)
           {
             margin-left: 0;
+          }
+
+          & > div
+          {
+            margin: 0 auto;
+            max-width: 325px;
           }
         }
       }
