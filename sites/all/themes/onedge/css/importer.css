@@ -508,6 +508,9 @@ textarea {
     background-size: 24px 24px; }
     .block--home-social .fb:hover, .block--home-social .ig:hover {
       color: #26d0b6; }
+    @media (max-width: 640px) {
+      .block--home-social .fb, .block--home-social .ig {
+        display: block; } }
   .block--home-social .fb {
     background-image: url(../images/icon-fb-black.svg); }
     .block--home-social .fb:hover {

@@ -218,6 +218,13 @@
     {
       color: #26d0b6;
     }
+    &
+    {
+      @media (max-width: 640px)
+      {
+        display: block;
+      }
+    }
   }
   .fb
   {
