@@ -733,6 +733,7 @@ textarea {
       text-align: center;
       width: 350px;
       height: 30px;
+      line-height: 28px;
       margin-right: 20px; }
       @media (max-width: 760px) {
         .block--newsletter label input {
